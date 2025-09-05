@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form id="regForm" novalidate>
+    <h3>Register A Student</h3>
+
+    <label for="fname">First Name:</label>
+    <input type="text" class="inputBox" name="username" required><br>
+    
+    <br>
+    <label for="lname">Last Name:</label>
+    <input type="text" class="inputBox" name="username" required><br>
+    
+    <br>
+    <label for="programme">Programme:</label>
+    <input class="inputBox" name="programme" required><br>
+
+    <br>
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input type="email" class="inputBox" name="email" required/>
+    <small class="error" id="err-email"></small>
+   
+    <br>
+    <fieldset>
+     <legend>Year of Study <span aria-hidden="true">*</span></legend>
+     <label><input type="radio" name="year" value="1" required/> 1</label>
+     <label><input type="radio" name="year" value="2"/> 2</label>
+    </fieldset>
+    
+    <br>
+    <label for="photoUrl">Photo URL:</label>
+    <input class="inputBox" name="photoUrl" type="url">
+    
+    <br>
+    <label for="textarea" id="textarea">Hobbies:</label><br>
+    <textarea name="hobbies" class="inputBox" rows="5" cols="30" placeholder="Enter your hobbies:"></textarea><br>
+    
+    <h3>Profile Cards:</h3>
+  <div id="cardsContainer"></div>
+
+  <h3>Summary Table</h3>
+  <table id="summaryTable" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Programme</th>
+        <th>Year</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
+    <br>
+    <div aria-live="polite" class="sr" id="live"></div>
+    <button type="submit" class="formButton1">Add Student</button>
+</form>
+
+<script src="/index.js"></script>
+</body>
+
+</html>
